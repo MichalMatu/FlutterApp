@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+const Color color1 = Color.fromARGB(255, 27, 40, 50);
+
 class WelcomeScreenText extends StatelessWidget {
   const WelcomeScreenText({super.key});
   @override
@@ -10,7 +12,7 @@ class WelcomeScreenText extends StatelessWidget {
         style: TextStyle(
           fontSize: 24,
           fontWeight: FontWeight.bold,
-          color: Color.fromARGB(255, 56, 58, 59),
+          color: color1,
           fontStyle: FontStyle.italic,
         ),
       ),
