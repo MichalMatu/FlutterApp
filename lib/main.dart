@@ -2,19 +2,37 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: const Text('My First App'),
+      home: Scaffold(
+    body: GradientContainer(),
+  )));
+}
+
+class GradientContainer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Color.fromARGB(255, 86, 176, 250),
+            Color.fromARGB(255, 49, 104, 172),
+            Color.fromARGB(255, 27, 73, 138),
+          ],
+        ),
       ),
-      body: const Center(
-        child: Text('Hello World',
-            style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 104, 136, 162),
-                fontStyle: FontStyle.italic)),
+      child: const Center(
+        child: Text(
+          'Hello World',
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Color.fromARGB(255, 56, 58, 59),
+            fontStyle: FontStyle.italic,
+          ),
+        ),
       ),
-    ),
-  ));
+    );
+  }
 }
