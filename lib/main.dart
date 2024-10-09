@@ -16,6 +16,6 @@ const List<Color> colors = [
 void main() {
   runApp(const MaterialApp(
       home: Scaffold(
-    body: GradientContainer(colors),
+    body: GradientContainer(colors: colors),
   )));
 }
