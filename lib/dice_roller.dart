@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
@@ -10,16 +11,13 @@ class DiceRoller extends StatefulWidget {
 
 class _DiceRollerState extends State<DiceRoller> {
   // declare a variable to store the active dice image
-  String activeDiceImage = 'assets/images/dice-1.png';
+  var currentDiceRoll = 1;
 
   void rollDice() {
     // body of the function
     setState(() {
-      // activeDiceImage = 'assets/images/dice-2.png';
-      // create a random number between 1 and 6 and store it in a variable
-      int randomNumber = 1 + (DateTime.now().millisecond % 6);
-      // update the activeDiceImage variable based on the random number
-      activeDiceImage = 'assets/images/dice-$randomNumber.png';
+      // update the activeDiceImage variable
+      currentDiceRoll = Random().nextInt(6) + 1;
     });
   }
 
@@ -29,7 +27,7 @@ class _DiceRollerState extends State<DiceRoller> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(
-          activeDiceImage,
+          'assets/images/dice-$currentDiceRoll.png',
           fit: BoxFit.cover,
           width: 200,
           height: 200,
