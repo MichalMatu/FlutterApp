@@ -4,7 +4,7 @@ import 'package:my_first_app/welcome_screen_text.dart';
 const String text = "Welcome !!!";
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer(this.colors, {super.key});
+  const GradientContainer({super.key, required this.colors});
 
   final List<Color> colors;
 
