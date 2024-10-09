@@ -3,13 +3,16 @@ import 'package:flutter/material.dart';
 const Color color1 = Color.fromARGB(255, 27, 40, 50);
 
 class WelcomeScreenText extends StatelessWidget {
-  const WelcomeScreenText({super.key});
+  const WelcomeScreenText(this.text, {super.key});
+
+  final String text;
+
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
       child: Text(
-        'Welcome to My First App',
-        style: TextStyle(
+        text,
+        style: const TextStyle(
           fontSize: 24,
           fontWeight: FontWeight.bold,
           color: color1,
