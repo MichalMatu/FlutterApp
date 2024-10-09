@@ -14,8 +14,11 @@ const List<Color> colors = [
 ];
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(
+    const MaterialApp(
       home: Scaffold(
-    body: GradientContainer(colors: colors),
-  )));
+        body: GradientContainer(colors: colors),
+      ),
+    ),
+  );
 }
